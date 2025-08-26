@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Webs para Abogados | Más clientes, mejor imagen</title>
+  <meta name="description" content="Landing page para vender planes web a abogados: credibilidad, SEO local y más consultas.">
+  <meta name="theme-color" content="#0f172a">
+  <meta property="og:title" content="Webs para Abogados | Más clientes, mejor imagen">
+  <meta property="og:description" content="Planes claros: Legal Start, Legal Plus y Legal Authority. Entrega en 7 días.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ejemplo.com/abogados">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E⚖️%3C/text%3E%3C/svg%3E">
+  <style>
+    :root{
+      --bg: #0b1220;           /* slate-950 */
+      --panel: #0f172a;        /* slate-900 */
+      --panel-2:#111827;       /* gray-900 */
+      --text: #e5e7eb;         /* gray-200 */
+      --muted:#9ca3af;         /* gray-400 */
+      --brand:#7c3aed;         /* violet-600 */
+      --brand-2:#a78bfa;       /* violet-300 */
+      --accent:#22c55e;        /* green-500 */
+      --danger:#ef4444;
+      --ring:rgba(124,58,237,.45);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --radius-sm: 12px;
+      --radius-lg: 24px;
+      --gap: 22px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background: radial-gradient(1200px 700px at 70% -10%, rgba(124,58,237,.18), transparent 70%), linear-gradient(180deg, #0a0f1d 0%, #0b1220 100%);
+      line-height:1.6;
+    }
+    a{color:inherit}
+    .container{width:min(1100px, 92%); margin-inline:auto}
+    .skip-link{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;}
+    .skip-link:focus{left:1rem; top:1rem; width:auto; height:auto; background:#fff; color:#000; padding:.5rem .75rem; border-radius:8px}
+    header{
+      position:sticky; top:0; z-index:20;
+      backdrop-filter: saturate(120%) blur(8px);
+      background: rgba(15,23,42,.75);
+      border-bottom:1px solid rgba(148,163,184,.15);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between; padding:14px 0;
+    }
+    .brand{display:flex; gap:.6rem; align-items:center; font-weight:700; letter-spacing:.2px}
+    .brand .logo{
+      width:36px; height:36px; display:grid; place-items:center; border-radius:12px;
+      background:linear-gradient(135deg,var(--brand),#5b21b6);
+      box-shadow:0 6px 20px rgba(124,58,237,.4);
+      font-size:20px;
+    }
+    .cta-mini{
+      display:inline-flex; gap:.6rem; align-items:center;
+      padding:.65rem 1rem; border-radius:999px; background:linear-gradient(180deg, var(--brand), #6d28d9);
+      color:white; text-decoration:none; font-weight:600; box-shadow: var(--shadow);
+      transition: transform .15s ease, filter .15s ease; border:1px solid rgba(255,255,255,.08)
+    }
+    .cta-mini:hover{transform: translateY(-1px); filter:brightness(1.05)}
+    .cta-mini:focus-visible{outline:3px solid var(--ring); outline-offset:3px}
+    .hero{padding: 64px 0 28px}
+    .hero-grid{
+      display:grid; gap:var(--gap);
+      grid-template-columns: 1.1fr .9fr;
+    }
+    .badge{
+      display:inline-flex; align-items:center; gap:.5rem; padding:.35rem .6rem; border-radius:999px;
+      background: rgba(34,197,94,.15); color:#bbf7d0; font-weight:600; font-size:.9rem; border:1px solid rgba(34,197,94,.25)
+    }
+    .title{
+      font-size: clamp(32px, 4.2vw, 52px); line-height:1.1; margin:14px 0 10px; font-weight:800;
+      letter-spacing:-.02em;
+    }
+    .subtitle{font-size: clamp(16px, 2vw, 19px); color:var(--muted); max-width:55ch}
+    .hero-card{
+      background: linear-gradient(180deg, rgba(124,58,237,.18), rgba(124,58,237,.06));
+      border:1px solid rgba(167,139,250,.25);
+      border-radius: var(--radius);
+      padding:18px;
+      box-shadow: var(--shadow);
+    }
+    .hero-cta{
+      display:flex; flex-wrap:wrap; gap:12px; margin:20px 0 6px
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+      padding: .9rem 1.1rem; border-radius:12px; text-decoration:none; font-weight:700; letter-spacing:.2px;
+      border:1px solid rgba(255,255,255,.08); transition: transform .15s ease, filter .15s ease, box-shadow .2s ease;
+    }
+    .btn-primary{background:linear-gradient(180deg, var(--brand), #6d28d9); color:#fff; box-shadow:0 12px 30px rgba(124,58,237,.33)}
+    .btn-primary:hover{transform:translateY(-1px); filter:brightness(1.05)}
+    .btn-outline{background:transparent; color:var(--text); border:1px solid rgba(148,163,184,.25)}
+    .btn-outline:hover{transform:translateY(-1px); border-color:rgba(255,255,255,.5)}
+    .trust{display:flex; gap:14px; align-items:center; color:var(--muted); font-size:.95rem}
+    .kpis{display:grid; gap:10px; grid-template-columns: repeat(3, 1fr); margin-top:10px}
+    .kpi{background: rgba(2,6,23,.5); border:1px solid rgba(148,163,184,.15); border-radius:14px; padding:14px}
+    .kpi strong{font-size:1.6rem; display:block}
+    section{padding:54px 0}
+    .section-title{font-size: clamp(22px, 2.8vw, 32px); margin:0 0 10px; font-weight:800}
+    .section-sub{color:var(--muted); margin:0 0 22px}
+    .benefits{display:grid; gap:var(--gap); grid-template-columns: repeat(3, 1fr)}
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+      border:1px solid rgba(148,163,184,.15); border-radius: var(--radius); padding:18px; box-shadow:var(--shadow);
+    }
+    .card h3{margin:.2rem 0 .4rem}
+    .plans{display:grid; gap:var(--gap); grid-template-columns: repeat(3, 1fr)}
+    .plan{position:relative; padding:20px; border-radius: var(--radius-lg); border:1px solid rgba(148,163,184,.2);
+      background: linear-gradient(180deg, rgba(17,24,39,.9), rgba(15,23,42,.9));
+      box-shadow: var(--shadow);
+    }
+    .plan.popular{outline:2px solid var(--brand); outline-offset:2px}
+    .price{font-size:2rem; font-weight:800}
+    .features{list-style:none; padding:0; margin:12px 0; display:grid; gap:10px}
+    .features li{display:flex; gap:.6rem; align-items:flex-start}
+    .check{width:22px; height:22px; border-radius:6px; background:rgba(34,197,94,.2); display:grid; place-items:center; font-weight:900}
+    .x{width:22px; height:22px; border-radius:6px; background:rgba(239,68,68,.2); display:grid; place-items:center; font-weight:900}
+    .table{overflow-x:auto; border-radius:12px; border:1px solid rgba(148,163,184,.15)}
+    table{width:100%; border-collapse:collapse; font-size:.98rem}
+    th, td{padding:12px 14px; border-bottom:1px solid rgba(148,163,184,.15); text-align:left}
+    tbody tr:hover{background: rgba(255,255,255,.02)}
+    .testimonials{display:grid; gap:var(--gap); grid-template-columns: repeat(3, 1fr)}
+    .quote{font-style:italic; color:#cbd5e1}
+    .guarantee{
+      display:grid; gap:var(--gap); grid-template-columns: 1fr 1fr;
+      background:linear-gradient(135deg, rgba(124,58,237,.18), rgba(34,197,94,.12));
+      border:1px solid rgba(167,139,250,.25); border-radius: var(--radius-lg); padding:22px;
+    }
+    .faq{display:grid; gap:12px}
+    details{background: rgba(2,6,23,.5); border:1px solid rgba(148,163,184,.15); border-radius:12px; padding:12px}
+    summary{cursor:pointer; font-weight:700}
+    footer{padding:28px 0 60px; color:var(--muted)}
+    .footer-grid{display:grid; gap:var(--gap); grid-template-columns: 2fr 1fr 1fr}
+    .badge-mini{font-size:.75rem; color:#a5b4fc; border:1px solid rgba(167,139,250,.35); padding:.2rem .5rem; border-radius:999px}
+    .whatsapp{display:inline-flex; align-items:center; gap:.5rem}
+    .whatsapp svg{width:20px; height:20px}
+    .note{font-size:.9rem; color:#94a3b8}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .grid{display:grid; gap:var(--gap)}
+    .center{text-align:center}
+    .mt-1{margin-top:6px}.mt-2{margin-top:12px}.mt-3{margin-top:18px}.mt-4{margin-top:24px}.mt-5{margin-top:32px}
+    .mb-0{margin-bottom:0}
+    .pill{display:inline-flex; gap:.5rem; align-items:center; padding:.4rem .7rem; border-radius:999px; border:1px solid rgba(148,163,184,.25); background:rgba(148,163,184,.08)}
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns: 1fr}
+      .benefits{grid-template-columns:1fr}
+      .plans{grid-template-columns:1fr}
+      .testimonials{grid-template-columns:1fr}
+      .guarantee{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr}
+      .kpis{grid-template-columns:1fr 1fr 1fr}
+    }
+    @media (prefers-reduced-motion: reduce){
+      *{animation:none !important; transition:none !important}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Diseño de sitios web para abogados",
+    "areaServed":"Latinoamérica",
+    "provider":{"@type":"Organization","name":"Tu Agencia"},
+    "hasOfferCatalog":{
+      "@type":"OfferCatalog",
+      "name":"Planes Web",
+      "itemListElement":[
+        {"@type":"Offer","name":"Legal Start","priceCurrency":"USD","price":"500"},
+        {"@type":"Offer","name":"Legal Plus","priceCurrency":"USD","price":"900"},
+        {"@type":"Offer","name":"Legal Authority","priceCurrency":"USD","price":"1500"}
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+  <a href="#planes" class="skip-link">Saltar al contenido</a>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Navegación principal">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">⚖️</div>
+        <span>Webs para Abogados</span>
+      </div>
+      <a class="cta-mini" href="https://wa.me/573001151592?text=Hola%20quiero%20mi%20web%20profesional%20para%20abogado" aria-label="Hablar por WhatsApp">Hablar por WhatsApp</a>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="badge">Entrega en 7 días • Garantía de satisfacción</span>
+          <h1 class="title">Tu bufete necesita más clientes.<br> Nosotros te damos la web que los atrae.</h1>
+          <p class="subtitle">Sitios web profesionales para abogados que buscan credibilidad, posicionamiento en Google y más consultas. Nos enfocamos en resultados, no en “solo diseño”.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#planes">Ver planes</a>
+            <a class="btn btn-outline" href="https://wa.me/573001151592?text=Quiero%20asesoria%20gratuita%20para%20mi%20web%20de%20abogado" rel="noopener">Asesoría gratuita</a>
+          </div>
+          <div class="trust mt-2">
+            <span class="pill">SSL & Hosting incluidos (Plus & Authority)</span>
+            <span class="pill">Optimizado para móviles</span>
+            <span class="pill">WhatsApp y Calendly</span>
+          </div>
+          <div class="kpis">
+            <div class="kpi"><strong>+80%</strong> de clientes buscan abogados en Google.</div>
+            <div class="kpi"><strong>7 días</strong> tiempo de entrega típico.</div>
+            <div class="kpi"><strong>24/7</strong> captación con chatbot y formularios.</div>
+          </div>
+        </div>
+        <div>
+          <div class="hero-card" role="img" aria-label="Vista previa de una web para abogados con perfil, servicios y botón de contacto">
+            <img src="./lawyerslanding.png" alt="Oficina de abogados moderna" style="width:100%; border-radius:12px; aspect-ratio: 16/10; object-fit:cover">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="beneficios">
+      <div class="container">
+        <h2 class="section-title">¿Por qué tu web importa más que nunca?</h2>
+        <p class="section-sub">Confianza, visibilidad y conversiones reales. Hablamos el idioma de negocio: más consultas y mejores casos.</p>
+        <div class="benefits">
+          <article class="card">
+            <h3>Credibilidad inmediata</h3>
+            <p>Presenta tu experiencia, casos y testimonios con un diseño sobrio, profesional y orientado a inspirar confianza.</p>
+          </article>
+          <article class="card">
+            <h3>SEO Local que funciona</h3>
+            <p>Te encuentran en Google y Google Maps con optimización local, estructura técnica correcta y contenido relevante.</p>
+          </article>
+          <article class="card">
+            <h3>Contactos sin fricción</h3>
+            <p>Botón de WhatsApp, formulario claro y <em>agenda online</em> (Calendly) para convertir visitas en consultas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="planes">
+      <div class="container">
+        <h2 class="section-title">Elige el plan que se adapta a tu despacho</h2>
+        <p class="section-sub">Planes simples, resultados concretos. Sin tecnicismos innecesarios.</p>
+        <div class="plans" role="list">
+          <article class="plan" aria-labelledby="p1">
+            <div class="badge-mini">Legal Start</div>
+            <h3 id="p1" class="mt-1">Básico</h3>
+            <p class="price">$500</p>
+            <ul class="features">
+              <li><span class="check" aria-hidden="true">✓</span> Página de inicio profesional</li>
+              <li><span class="check" aria-hidden="true">✓</span> Página de servicios (hasta 3)</li>
+              <li><span class="check" aria-hidden="true">✓</span> Contacto con WhatsApp y formulario</li>
+              <li><span class="check" aria-hidden="true">✓</span> Google Maps integrado</li>
+              <li><span class="check" aria-hidden="true">✓</span> Diseño responsive y rápido</li>
+              <li><span class="x" aria-hidden="true">×</span> Blog / SEO ampliado</li>
+              <li><span class="x" aria-hidden="true">×</span> Agenda online</li>
+              <li><span class="x" aria-hidden="true">×</span> Chatbot IA</li>
+            </ul>
+            <a class="btn btn-primary" href="https://wa.me/573001151592?text=Quiero%20el%20plan%20Legal%20Start" aria-label="Contratar plan Legal Start">Contratar este plan</a>
+          </article>
+
+          <article class="plan popular" aria-labelledby="p2">
+            <div class="badge-mini">Legal Plus</div>
+            <h3 id="p2" class="mt-1">Estándar</h3>
+            <p class="price">$900</p>
+            <ul class="features">
+              <li><span class="check">✓</span> Todo en Legal Start</li>
+              <li><span class="check">✓</span> Blog con 3 artículos iniciales</li>
+              <li><span class="check">✓</span> SEO básico (palabras clave y meta tags)</li>
+              <li><span class="check">✓</span> SSL + Hosting 1 año</li>
+              <li><span class="check">✓</span> Página de testimonios</li>
+              <li><span class="x">×</span> Agenda online</li>
+              <li><span class="x">×</span> Chatbot IA</li>
+            </ul>
+            <a class="btn btn-primary" href="https://wa.me/573001151592?text=Quiero%20el%20plan%20Legal%20Plus" aria-label="Contratar plan Legal Plus">Contratar este plan</a>
+          </article>
+
+          <article class="plan" aria-labelledby="p3">
+            <div class="badge-mini">Legal Authority</div>
+            <h3 id="p3" class="mt-1">Premium</h3>
+            <p class="price">$1500</p>
+            <ul class="features">
+              <li><span class="check">✓</span> Todo en Legal Plus</li>
+              <li><span class="check">✓</span> Copywriting persuasivo</li>
+              <li><span class="check">✓</span> SEO avanzado (GMB + backlinks)</li>
+              <li><span class="check">✓</span> Integración con Calendly</li>
+              <li><span class="check">✓</span> Chatbot básico (FAQ)</li>
+            </ul>
+            <a class="btn btn-primary" href="https://wa.me/573001151592?text=Quiero%20el%20plan%20Legal%20Authority" aria-label="Contratar plan Legal Authority">Contratar este plan</a>
+          </article>
+        </div>
+
+        <div class="mt-4 table" aria-label="Comparativa de características">
+          <table>
+            <thead>
+              <tr>
+                <th>Característica</th>
+                <th>Legal Start</th>
+                <th>Legal Plus</th>
+                <th>Legal Authority</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Tiempo de entrega</td><td>7 días</td><td>7-10 días</td><td>10-14 días</td></tr>
+              <tr><td>Páginas</td><td>Hasta 5</td><td>Hasta 10</td><td>Sin límite razonable</td></tr>
+              <tr><td>Soporte</td><td>Email</td><td>Email + WhatsApp</td><td>Prioritario</td></tr>
+              <tr><td>Mantenimiento</td><td>—</td><td>1 mes</td><td>3 meses</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonios">
+      <div class="container">
+        <h2 class="section-title">Abogados que ya confían</h2>
+        <p class="section-sub">Testimonios reales. Resultados medibles.</p>
+        <div class="testimonials">
+          <article class="card">
+            <p class="quote">“Mi imagen profesional cambió por completo. Ahora me encuentran en Google y mi agenda se llenó.”</p>
+            <p class="mt-1"><strong>Laura G.</strong> – Penalista</p>
+          </article>
+          <article class="card">
+            <p class="quote">“El proceso fue claro y rápido. La web convirtió en la primera semana.”</p>
+            <p class="mt-1"><strong>Carlos R.</strong> – Laboral</p>
+          </article>
+          <article class="card">
+            <p class="quote">“El paquete Premium valió cada peso. El chatbot filtra consultas y ahorra tiempo.”</p>
+            <p class="mt-1"><strong>Daniela P.</strong> – Civil</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="garantia">
+      <div class="container guarantee">
+        <div>
+          <h2 class="section-title mb-0">Empieza sin riesgo</h2>
+          <p class="section-sub">Entrega rápida, garantía real y cero letra pequeña.</p>
+          <ul class="features">
+            <li><span class="check">✓</span> Entrega en 7 días</li>
+            <li><span class="check">✓</span> Garantía de satisfacción: lo corregimos sin costo</li>
+            <li><span class="check">✓</span> Hosting + dominio 1 año (Plus y Authority)</li>
+          </ul>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="https://wa.me/573001151592?text=Quiero%20mi%20web%20para%20abogado">Solicitar mi web ahora</a>
+            <a class="btn btn-outline" href="#contacto">Enviar formulario</a>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <h3>¿Dudas rápidas?</h3>
+            <div class="faq">
+              <details><summary>¿Puedo pagar en partes?</summary><p>Sí. 60% al inicio, 40% al entregar.</p></details>
+              <details><summary>¿Puedo migrar mi web actual?</summary><p>Claro. Incluimos migración de contenido sin costo en Plus y Authority.</p></details>
+              <details><summary>¿Trabajan con firmas y abogados independientes?</summary><p>Sí, adaptamos el plan a tu contexto.</p></details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="container">
+        <h2 class="section-title">Hablemos de tu web</h2>
+        <p class="section-sub">Agenda una llamada o envía un mensaje. Respondemos en el mismo día hábil.</p>
+        <div class="grid">
+          <form class="card" action="https://formspree.io/f/movnqkda" method="POST">
+            <div class="grid" style="grid-template-columns:1fr 1fr; gap:12px">
+              <div>
+                <label for="nombre">Nombre</label>
+                <input id="nombre" name="nombre" required placeholder="Tu nombre" style="width:100%; margin-top:6px; padding:12px; background:#0b1220; color:var(--text); border:1px solid rgba(148,163,184,.25); border-radius:10px">
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" required placeholder="tucorreo@ejemplo.com" style="width:100%; margin-top:6px; padding:12px; background:#0b1220; color:var(--text); border:1px solid rgba(148,163,184,.25); border-radius:10px">
+              </div>
+            </div>
+            <div class="mt-2">
+              <label for="mensaje">¿Qué necesitas?</label>
+              <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos sobre tu despacho y objetivos" style="width:100%; margin-top:6px; padding:12px; background:#0b1220; color:var(--text); border:1px solid rgba(148,163,184,.25); border-radius:10px"></textarea>
+            </div>
+            <div class="mt-2">
+              <button class="btn btn-primary" type="submit">Enviar</button>
+              <a class="btn btn-outline" href="mailto:d.caldascaridad@gmail.com">Escribir por email</a>
+            </div>
+          </form>
+
+          <div class="card">
+            <h3>También por WhatsApp</h3>
+            <p class="mt-1">Escríbenos y te enviamos una propuesta en menos de 24 horas.</p>
+            <p class="mt-1 whatsapp">
+              <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M19.11 17.48c-.26-.13-1.52-.75-1.75-.84-.23-.09-.4-.13-.57.13-.17.26-.65.84-.8 1.01-.15.17-.3.2-.56.07-.26-.13-1.08-.4-2.06-1.27-.76-.68-1.27-1.52-1.42-1.78-.15-.26-.02-.4.11-.53.11-.11.26-.3.38-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.07-.13-.57-1.37-.78-1.88-.21-.5-.42-.43-.57-.43-.15 0-.32-.02-.49-.02-.17 0-.45.06-.68.32-.23.26-.9.88-.9 2.14 0 1.26.93 2.48 1.06 2.65.13.17 1.83 2.8 4.43 3.92.62.27 1.11.43 1.49.55.63.2 1.2.17 1.65.1.5-.08 1.52-.62 1.74-1.22.21-.6.21-1.12.15-1.22-.06-.1-.23-.16-.49-.29zM16.05 5C9.94 5 5 9.94 5 16.05c0 1.95.51 3.79 1.4 5.38L5 27l5.71-1.49A11 11 0 0 0 16.05 27C22.16 27 27.1 22.06 27.1 15.95 27.1 9.84 22.16 5 16.05 5zm0 20.1a9.97 9.97 0 0 1-5.08-1.41l-.36-.21-3.38.88.9-3.29-.23-.34A10 10 0 1 1 26.1 16.05 10.05 10.05 0 0 1 16.05 25.1z"/></svg>
+              <a class="cta-mini" href="https://wa.me/573001151592?text=Hola%20necesito%20una%20web%20para%20mi%20despacho">Chatear ahora</a>
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">
+          <div class="logo" aria-hidden="true">⚖️</div>
+          <strong>Webs para Abogados</strong>
+        </div>
+        <p class="mt-2">Creamos sitios que convierten visitas en consultas. Enfoque en SEO local, confianza y captación.</p>
+        <p class="mt-2">© <span id="year"></span> De Caldas. Todos los derechos reservados.</p>
+      </div>
+      <div>
+        <h4>Servicios</h4>
+        <ul class="mt-1" style="list-style:none; padding:0; margin:0">
+          <li>Diseño web</li>
+          <li>SEO Local</li>
+          <li>Landing pages</li>
+          <li>Chatbots</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul class="mt-1" style="list-style:none; padding:0; margin:0">
+          <li><a href="mailto:d.caldascaridad@gmail.com">d.caldascaridad@gmail.com</a></li>
+          <li><a href="https://wa.me/573001151592">WhatsApp</a></li>
+          <li><a href="#contacto">Formulario</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Año dinámico y ligero efecto de enfoque al abrir con hash
+    document.getElementById('year').textContent = new Date().getFullYear();
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) el.setAttribute('tabindex', '-1'), el.focus();
+    }
+  </script>
+</body>
+</html>
