@@ -215,6 +215,10 @@ a {
   align-items: flex-start;
 }
 
+dt.subtitle {
+  font-size: 23px;
+}
+
 .check {
   width: 22px;
   height: 22px;
@@ -252,6 +256,7 @@ a {
 .mt-4 { margin-top: 24px; }
 .mt-5 { margin-top: 32px; }
 .mb-0 { margin-bottom: 0; }
+.ml-0 { margin-left: 27px; }
 
 .pill {
   display: inline-flex;
