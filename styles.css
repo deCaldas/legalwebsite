@@ -417,6 +417,17 @@ section {
   margin: 0.2rem 0 0.4rem;
 }
 
+.recommends {
+  border-radius: var(--border-radius-sm);
+  display: inline-flex;
+  color: var(--color-muted);
+  font-size: 11px; 
+  letter-spacing: 0.2px;
+  opacity: 0.85;
+  background-color: #111827;
+  padding: 0.2rem 0.5rem;
+}
+
 /* Planes */
 .plans {
   display: grid;
@@ -426,7 +437,7 @@ section {
 
 .plan {
   position: relative;
-  padding: 20px;
+  padding: 23px;
   border-radius: var(--border-radius-lg);
   border: 1px solid var(--border-color-light);
   background: linear-gradient(180deg, rgba(17, 24, 39, 0.9), rgba(15, 23, 42, 0.9));
