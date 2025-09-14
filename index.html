@@ -32,9 +32,8 @@
   }
   </script>
 </head>
-
 <body>
-  <a href="#planes" class="skip-link">Saltar al contenido</a>
+  <a href="#contenido" class="skip-link">Saltar al contenido</a>
   <header>
     <div class="container nav" role="navigation" aria-label="Navegación principal">
       <div class="brand">
@@ -48,7 +47,7 @@
   <main id="contenido">
     <section class="hero">
       <div class="container hero-grid">
-        <div>
+        <div class="hero-content">
           <span class="badge">Garantía de satisfacción</span>
           <h1 class="title">Tu bufete necesita más clientes.<br> Nosotros te damos la web que los atrae.</h1>
           <p class="subtitle">Sitios web profesionales para abogados que buscan credibilidad, posicionamiento en Google y más consultas. Nos enfocamos en resultados, no en "solo diseño".</p>
@@ -69,22 +68,14 @@
         </div>  
         <div class="hero-card" role="img" aria-label="Vista previa de una web para abogados con perfil, servicios y botón de contacto">
           <picture>
-            <!-- Imagen para pantallas grandes (desktop 16:9) -->
-              <source media="(min-width: 900px)" srcset="./public/img/imgdesk-lawyers_landing.png" />
-
-            <!-- Imagen para tablets (769px-899px) - (tablet) -->
-              <source media="(min-width: 769px)" srcset="./public/img/imgdesk-lawyers_landing.png" />
-
-            <!-- Imagen para pantallas móviles (vertical) -->
-              <source media="(max-width: 768px)" srcset="./public/img/imgphone-lawyers_landing.png" />
-            
-            <!-- Imagen por defecto (fallback) -->
-              <img
-                src="./public/img/imgdesk-lawyers_landing.png"
-                alt="Landing page para abogados con perfil profesional, servicios y contacto"
-                loading="lazy"
-                decoding="async"
-              />
+            <source media="(min-width: 769px)" srcset="./public/img/imgdesk-lawyers_landing.png" />
+            <source media="(max-width: 768px)" srcset="./public/img/imgphone-lawyers_landing.png" />
+            <img
+              src="./public/img/imgdesk-lawyers_landing.png"
+              alt="Landing page para abogados con perfil profesional, servicios y contacto"
+              loading="lazy"
+              decoding="async"
+            />
           </picture>
         </div>
       </div>
@@ -114,18 +105,16 @@
     <!-- ===== Plan de Entrada: Legal Presencia ===== -->
     <section id="legal-presencia" aria-labelledby="lp-heading">
       <div class="container">
-        <div class="card" style="display:grid; gap:16px; padding:28px; align-items:center">
-          <div>
+        <div class="card legal-presencia-card">
+          <div class="lp-intro">
             <span class="badge-mini">Plan de Inicio Rápido</span>
-            <h2 id="lp-heading" class="section-title" style="margin-top:6px">Legal Presencia</h2>
-            <p class="section-sub" style="margin-top:6px">
-              La puerta de entrada a tu mundo digital. Presencia profesional en 24 horas.
-            </p>
+            <h2 id="lp-heading" class="section-title">Legal Presencia</h2>
+            <p class="section-sub">La puerta de entrada a tu mundo digital. Presencia profesional en 24 horas.</p>
           </div>
 
-          <div class="grid" style="grid-template-columns:1fr; gap:16px">
-            <div>
-              <p class="price" style="font-size:28px; font-weight:700; margin:8px 0">$200.000 <span style="font-size:14px; opacity:.8">COP · Pago único</span></p>
+          <div class="lp-content">
+            <div class="lp-details">
+              <p class="price">$200.000 <span class="price-note">COP · Pago único</span></p>
               <ul class="features" aria-label="Incluye">
                 <li><span class="check" aria-hidden="true">✓</span> Página web con diseño profesional</li>
                 <li><span class="check" aria-hidden="true">✓</span> Botón de WhatsApp</li>
@@ -136,10 +125,8 @@
                 <li><span class="check" aria-hidden="true">✓</span> Hosting y dominio por 1 año</li>                
               </ul>
 
-              <div class="hero-cta" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
-                <a class="btn btn-primary"
-                  href="https://wa.me/573001234567?text=Quiero%20el%20plan%20Legal%20Presencia%20por%20200.000%20COP"
-                  aria-label="Solicitar plan Legal Presencia por WhatsApp">
+              <div class="lp-cta">
+                <a class="btn btn-primary" href="https://wa.me/573001234567?text=Quiero%20el%20plan%20Legal%20Presencia%20por%20200.000%20COP" aria-label="Solicitar plan Legal Presencia por WhatsApp">
                   Empieza por $200.000 COP
                 </a>
                 <a class="btn btn-outline" href="#planes" aria-label="Ver planes superiores">
@@ -147,24 +134,25 @@
                 </a>
               </div>
 
-              <p class="recommends mt-1">
+              <p class="recommends">
                 Empieza hoy y escala <strong>cuando quieras</strong>. Agrega más secciones y funcionalidades, desde SEO y blog, hasta portafolio, agenda online y chatbot.
               </p>
+            </div>
 
-            <!-- Tarjeta visual a la derecha (opcional). Usa tu imagen móvil/escritorio existente -->
-            <div class="hero-card" role="img" aria-label="Vista previa de Legal Presencia">
-              <picture>
-                <source media="(min-width: 900px)" srcset="./public/img/imgdesk-lawyers_landing.png" />
-                <source media="(max-width: 768px)" srcset="./public/img/imgphone-lawyers_landing.png" />
-                <img src="./public/img/imgdesk-lawyers_landing.png"
-                    alt="Demo de landing de una firma legal con titular, servicios y WhatsApp"
-                    loading="lazy" decoding="async" />
-              </picture>
+            <div class="lp-image">
+              <div class="hero-card" role="img" aria-label="Vista previa de Legal Presencia">
+                <picture>
+                  <source media="(min-width: 900px)" srcset="./public/img/imgdesk-lawyers_landing.png" />
+                  <source media="(max-width: 768px)" srcset="./public/img/imgphone-lawyers_landing.png" />
+                  <img src="./public/img/imgdesk-lawyers_landing.png"
+                      alt="Demo de landing de una firma legal con titular, servicios y WhatsApp"
+                      loading="lazy" decoding="async" />
+                </picture>
+              </div>
             </div>
           </div>
 
-          <!-- Mini-FAQ para eliminar fricción -->
-          <div class="faq" style="margin-top:8px">
+          <div class="lp-faq">
             <details>
               <summary>¿Qué se entrega exactamente por $200.000?</summary>
               <p>Una página web con tu nombre, especialización, mensaje, y WhatsApp. Lista para recibir consultas; Este plan soluciona la necesidad básica de "estar presente" en el mundo digital. Es para quién solo busca un punto de contacto profesional.</p>
@@ -173,84 +161,72 @@
               <summary>¿Puedo ampliar después?</summary>
               <p>Sí. Elige las funcionalidades que se adaptan a tu estrategia. Si ya tienes una web, puedes agregar estas funcionalidades cuando lo requieras. <em>Pasa de una simple <q>tarjeta de presentación</q> a una herramienta totalmente interactiva.</em></p>
               
-                <div class="faq" style="margin-top:8px">
-                  <h3 style="margin-top:16px; margin-bottom:8px">Funcionalidades adicionales:</h3>
+              <h3>Funcionalidades adicionales:</h3>
 
-                  <details>
-                    <summary>Conexión Profesional</summary>
-                    <p>Se trata de pasar de una presencia en línea a un punto de encuentro.</p>
-                    <div class="grid" style="grid-template-columns:1fr; gap:12px;">
-                        <dl>
-                          <dd> Botón de WhatsApp + Formulario de contacto</dd>
-                        </dl>
-                        <span>Precio: $700.000 COP</span>
-                    </div>
-                  </details>
-
-                  <details>
-                    <summary>Autoridad Digital</summary>
-                    <p>Construye tu reputación en línea y posiciona tu marca como la de un experto.</p>
-                    <div class="grid" style="grid-template-columns:1fr; gap:12px;">
-                      <dl>
-                        <dd> Blog con 7 artículos iniciales + Portafolio de casos de éxito</dd>
-                      </dl>
-                      <span>Precio: $1.000.000 COP</span>
-                    </div>
-                  </details>
-
-                  <details>
-                    <summary>Optimización en Conversión</summary>
-                    <p>Automatiza el proceso de contacto y calificación para llenar tu agenda.</p>
-                    <div class="grid" style="grid-template-columns:1fr; gap:12px;">
-                      <dl>
-                        <dd> Agenda online + Chatbot (FAQ)</dd>
-                      </dl>
-                      <span>Precio: $2.000.000 COP</span>
-                    </div>
-                  </details>
-
-                  <details>
-                    <summary>Diseño de Marca e Identidad Visual</summary>
-                    <p>Un diseño coherente y profesional que refleje tu experiencia y valores.</p>
-                    <div class="grid" style="grid-template-columns:1fr; gap:12px;">
-                      <dl>
-                        <dd> Definición general del estilo visual con logo principal y sus variaciones, paleta de colores, tipografía y fuentes. Para profesionales que requieren una identidad visual única y memorable.</dd>
-                      </dl>
-                      <span>Precio: $2.000.000 COP</span>
-                    </div>
-                  </details>
-
-                  <p>O. Podríamos migrar a <em><strong>Legal Start</strong></em>, <em><strong>Legal Plus</strong></em> o <em><strong>Legal Authority</strong></em> sin rehacer nada.</p>
-
-                  <details>
-                    <summary>¡Oferta Bundle!</summary>
-                    <div class="bundle-card">
-                      <p style="font-size:17px; font-weight:600; color: #1ad99a;">Obtén el <span style="color:#22c55e;">Paquete de Lanzamiento Completo</span></p>
-
-                      <ul style="list-style:none; padding:0; margin:0;">
-                          <li><span style="font-weight:700;">✓</span> Plan Legal Plus</li>
-                          <li><span style="font-weight:700;">✓</span> Diseño de Marca e Identidad Visual</li>
-                      </ul>
-
-                          <div style="margin-top:16px; display:flex; justify-content:space-between; align-items:flex-end;">
-                                  <div style="display:flex; flex-direction:column;">
-                              <p style="font-size:14px; opacity:.7;">Precio por separado:</p>
-                              <p style="font-size:18px; text-decoration:line-through; color:#888;">$4'200.000 COP</p>
-                          </div>
-                          <div style="text-align:right;">
-                              <p style="font-size:14px; opacity:.7;">Precio del bundle:</p>
-                              <p style="font-size:24px; font-weight:700; color:#22c55e;">$3'500.000 COP</p>
-                          </div>
-                      </div>
-                      <p style="text-align:center; font-weight:600; color:#ff4d4d; margin-top:8px;">Ahorras: $700.000 COP</p>
-                      <a class="btn btn-primary"
-                        href="https://wa.me/573001151592?text=Me%20interesa%20el%20Paquete%20de%20Lanzamiento%20Completo"
-                        style="width:100%; text-align:center; margin-top:16px;">
-                          Contratar Paquete Completo
-                      </a>
-                  </div>
-                  </details>
+              <details>
+                <summary>Conexión Profesional</summary>
+                <p>Se trata de pasar de una presencia en línea a un punto de encuentro.</p>
+                <div class="addon-detail">
+                  <p>Botón de WhatsApp + Formulario de contacto</p>
+                  <span class="addon-price">Precio: $700.000 COP</span>
                 </div>
+              </details>
+
+              <details>
+                <summary>Autoridad Digital</summary>
+                <p>Construye tu reputación en línea y posiciona tu marca como la de un experto.</p>
+                <div class="addon-detail">
+                  <p>Blog con 7 artículos iniciales + Portafolio de casos de éxito</p>
+                  <span class="addon-price">Precio: $1.000.000 COP</span>
+                </div>
+              </details>
+
+              <details>
+                <summary>Optimización en Conversión</summary>
+                <p>Automatiza el proceso de contacto y calificación para llenar tu agenda.</p>
+                <div class="addon-detail">
+                  <p>Agenda online + Chatbot (FAQ)</p>
+                  <span class="addon-price">Precio: $2.000.000 COP</span>
+                </div>
+              </details>
+
+              <details>
+                <summary>Diseño de Marca e Identidad Visual</summary>
+                <p>Un diseño coherente y profesional que refleje tu experiencia y valores.</p>
+                <div class="addon-detail">
+                  <p>Definición general del estilo visual con logo principal y sus variaciones, paleta de colores, tipografía y fuentes. Para profesionales que requieren una identidad visual única y memorable.</p>
+                  <span class="addon-price">Precio: $2.000.000 COP</span>
+                </div>
+              </details>
+
+              <p>O. Podríamos migrar a <em><strong>Legal Start</strong></em>, <em><strong>Legal Plus</strong></em> o <em><strong>Legal Authority</strong></em> sin rehacer nada.</p>
+
+              <details>
+                <summary>¡Oferta Bundle!</summary>
+                <div class="bundle-card">
+                  <p class="bundle-title">Obtén el <span class="bundle-highlight">Paquete de Lanzamiento Completo</span></p>
+
+                  <ul class="bundle-features">
+                    <li><span class="bundle-check">✓</span> Plan Legal Plus</li>
+                    <li><span class="bundle-check">✓</span> Diseño de Marca e Identidad Visual</li>
+                  </ul>
+
+                  <div class="bundle-pricing">
+                    <div class="original-price">
+                      <p>Precio por separado:</p>
+                      <p class="strikethrough">$4'200.000 COP</p>
+                    </div>
+                    <div class="bundle-price">
+                      <p>Precio del bundle:</p>
+                      <p class="highlight-price">$3'500.000 COP</p>
+                    </div>
+                  </div>
+                  <p class="bundle-savings">Ahorras: $700.000 COP</p>
+                  <a class="btn btn-primary bundle-btn" href="https://wa.me/573001151592?text=Me%20interesa%20el%20Paquete%20de%20Lanzamiento%20Completo">
+                    Contratar Paquete Completo
+                  </a>
+                </div>
+              </details>
             </details>
           </div>
         </div>
@@ -265,89 +241,93 @@
         <div class="plans" role="list">
           <article class="plan" aria-labelledby="p1">
             <div class="badge-mini">Legal Start</div>
-            <h3 id="p1" class="mt-1">Básico</h3>
-            <p class="price">$700.000<span style="font-size:14px; opacity:.8"> COP </span></p>
-            <ul class="features">
-              <h4 class="mt-1">Incluye:</h4>
-              <li><span class="check"aria-hidden="true">✓</span> La oferta de Legal Presencia +</li>
-              <li><span class="check" aria-hidden="true">✓</span> Sección de servicios</li>
-              <li><span class="check" aria-hidden="true">✓</span> Formulario de contacto</li>
-              <li><span class="x" aria-hidden="true">X</span> Blog / SEO ampliado</li>
-              <li><span class="x" aria-hidden="true">X</span> Agenda online</li>
-              <li><span class="x" aria-hidden="true">X</span> Chatbot IA</li>
-            </ul>
+            <h3 id="p1">Básico</h3>
+            <p class="price">$700.000<span class="price-note"> COP </span></p>
+            <div class="features">
+              <h4>Incluye:</h4>
+              <ul>
+                <li><span class="check"aria-hidden="true">✓</span> La oferta de Legal Presencia +</li>
+                <li><span class="check" aria-hidden="true">✓</span> Sección de servicios</li>
+                <li><span class="check" aria-hidden="true">✓</span> Formulario de contacto</li>
+                <li><span class="x" aria-hidden="true">X</span> Blog / SEO ampliado</li>
+                <li><span class="x" aria-hidden="true">X</span> Agenda online</li>
+                <li><span class="x" aria-hidden="true">X</span> Chatbot IA</li>
+              </ul>
+            </div>
             <a class="btn btn-primary" href="https://wa.me/573001151592?text=Quiero%20el%20plan%20Legal%20Start" aria-label="Contratar plan Legal Start">Contratar este plan</a>
           </article>
 
           <article class="plan popular" aria-labelledby="p2">
             <div class="badge-mini">Legal Plus</div>
-            <h3 id="p2" class="mt-1">Estándar</h3>
-            <p class="price">$1'700.000<span style="font-size:14px; opacity:.8"> COP </span></p>
-            <ul class="features">
-              <h4 class="mt-1">Incluye:</h4>
-              <li><span class="check"aria-hidden="true">✓</span> La oferta de Legal Start +</li>
-              <li><span class="check"aria-hidden="true">✓</span> Blog Copywriting (7 artículos)</li>
-              <li><span class="check" aria-hidden="true">✓</span> Portafolio de casos de éxito</li>
-              <li><span class="x" aria-hidden="true">X</span> Agenda online</li>
-              <li><span class="x" aria-hidden="true">X</span> Chatbot IA</li>
-            </ul>
+            <h3 id="p2">Estándar</h3>
+            <p class="price">$1'700.000<span class="price-note"> COP </span></p>
+            <div class="features">
+              <h4>Incluye:</h4>
+              <ul>
+                <li><span class="check"aria-hidden="true">✓</span> La oferta de Legal Start +</li>
+                <li><span class="check"aria-hidden="true">✓</span> Blog Copywriting (7 artículos)</li>
+                <li><span class="check" aria-hidden="true">✓</span> Portafolio de casos de éxito</li>
+                <li><span class="x" aria-hidden="true">X</span> Agenda online</li>
+                <li><span class="x" aria-hidden="true">X</span> Chatbot IA</li>
+              </ul>
+            </div>
             <a class="btn btn-primary" href="https://wa.me/573001151592?text=Quiero%20el%20plan%20Legal%20Plus" aria-label="Contratar plan Legal Plus">Contratar este plan</a>
           </article>
 
           <article class="plan" aria-labelledby="p3">
             <div class="badge-mini">Legal Authority</div>
-            <h3 id="p3" class="mt-1">Premium</h3>
-            <p class="price">$3'200.000<span style="font-size:14px; opacity:.8"> COP </span></p>
-            <ul class="features">
-              <h4 class="mt-1">Incluye:</h4>
-              <li><span class="check">✓</span> La oferta de Legal Plus +</li>
-              <li><span class="check">✓</span> Integración con Calendly</li>
-              <li><span class="check">✓</span> Chatbot IA - (FAQ)</li>
-            </ul>
+            <h3 id="p3">Premium</h3>
+            <p class="price">$3'200.000<span class="price-note"> COP </span></p>
+            <div class="features">
+              <h4>Incluye:</h4>
+              <ul>
+                <li><span class="check">✓</span> La oferta de Legal Plus +</li>
+                <li><span class="check">✓</span> Integración con Calendly</li>
+                <li><span class="check">✓</span> Chatbot IA - (FAQ)</li>
+              </ul>
+            </div>
             <a class="btn btn-primary" href="https://wa.me/573001151592?text=Quiero%20el%20plan%20Legal%20Authority" aria-label="Contratar plan Legal Authority">Contratar este plan</a>
           </article>
         </div>
+      </div>
     </section>
 
     <section id="suscripcion-anual">
       <div class="container">
         <h2 class="section-title">Mantén tu negocio en crecimiento constante</h2>
-          <p class="section-sub">Transforma tu sitio web de un proyecto único a un activo de negocio que siempre genera valor.</p>
+        <p class="section-sub">Transforma tu sitio web de un proyecto único a un activo de negocio que siempre genera valor.</p>
 
-          <article class="plan" aria-labelledby="p3">
-            <div class="features">
-              <div class="card popular">
-                <span class="badge-mini">Suscripción</span>
-                <ul class="features">
-                  <li><span class="check" aria-hidden="true" >✓</span>Renovación anual de Hosting y Dominio.</li>
-                  <li><span class="check" aria-hidden="true" >✓</span> Mantenimiento y seguridad del sitio web.</li>
-                  <li><span class="check" aria-hidden="true" >✓</span> Soporte técnico para cualquier duda o ajuste menor.</li>
-                  <li><span class="check" aria-hidden="true" >✓</span> 24 artículos de blog optimizados para SEO [GMB / Backlinks].</li>
-                  <li><span class="check" aria-hidden="true" >✓</span> Un reporte de rendimiento anual de tu sitio.</li>
-                </ul>
-                
-                <div class="mt-4">
-                  <p class="ml-0" style="font-size:16px; color:#6c757d;">Precio de la suscripción:</p>
-                  <p class="price">$8'240.000 <span style="font-size:14px; opacity:.8">COP / Año</span></p>
-                  <p class="recommends">*Recomendado para los planes Legal Plus y Authority.</p>
-                </div>
-                
-                <a class="btn btn-primary"
-                  href="https://wa.me/573001151592?text=Quiero%20contratar%20la%20suscripci%C3%B3n%20anual%20de%20mantenimiento">
-                  Sí, quiero que mi sitio crezca
-                </a>
-              </div>
-  
-              <div class="trust mt-2">
-                <span class="pill">Servicio de crecimiento orgánico</span>
-                <span class="pill">2 artículos de blog al mes</span>
-              </div>
-
-              <div class="kpis">
-                <div class="kpi"><strong>Posicionamiento</strong> Un blog activo y con contenido de calidad te posiciona como una autoridad en tu nicho.</div>
-                <div class="kpi"><strong>Tráfico</strong> Cada artículo es una nueva puerta de entrada a tu sitio web desde Google. Con 24 puertas adicionales, el tráfico se disparará.</div>
-                <div class="kpi"><strong>Captación</strong> La gente que busca soluciones a problemas legales en Google son clientes potenciales de alto valor.</div>
+        <article class="plan">
+          <div class="card popular">
+            <span class="badge-mini">Suscripción</span>
+            <ul class="features">
+              <li><span class="check" aria-hidden="true">✓</span>Renovación anual de Hosting y Dominio.</li>
+              <li><span class="check" aria-hidden="true">✓</span> Mantenimiento y seguridad del sitio web.</li>
+              <li><span class="check" aria-hidden="true">✓</span> Soporte técnico para cualquier duda o ajuste menor.</li>
+              <li><span class="check" aria-hidden="true">✓</span> 24 artículos de blog optimizados para SEO [GMB / Backlinks].</li>
+              <li><span class="check" aria-hidden="true">✓</span> Un reporte de rendimiento anual de tu sitio.</li>
+            </ul>
+            
+            <div class="price">
+              <p class="price-label">Precio de la suscripción:</p>
+              <p class="price">$8'240.000 <span class="price-note">COP / Año</span></p>
+              <p class="recommends">*Recomendado para los planes Legal Plus y Authority.</p>
             </div>
+            
+            <a class="btn btn-primary" href="https://wa.me/573001151592?text=Quiero%20contratar%20la%20suscripci%C3%B3n%20anual%20de%20mantenimiento">
+              Sí, quiero que mi sitio crezca
+            </a>
+          </div>
+
+          <div class="trust">
+            <span class="pill">Servicio de crecimiento orgánico</span>
+            <span class="pill">2 artículos de blog al mes</span>
+          </div>
+
+          <div class="kpis">
+            <div class="kpi"><strong>Posicionamiento</strong> Un blog activo y con contenido de calidad te posiciona como una autoridad en tu nicho.</div>
+            <div class="kpi"><strong>Tráfico</strong> Cada artículo es una nueva puerta de entrada a tu sitio web desde Google. Con 24 puertas adicionales, el tráfico se disparará.</div>
+            <div class="kpi"><strong>Captación</strong> La gente que busca soluciones a problemas legales en Google son clientes potenciales de alto valor.</div>
           </div>
         </article>
       </div>
@@ -360,15 +340,15 @@
         <div class="testimonials">
           <article class="card">
             <p class="quote">"Mi imagen profesional cambió por completo. Ahora me encuentran en Google y mi agenda se llenó."</p>
-            <p class="mt-1"><strong>Laura G.</strong> – Penalista</p>
+            <p><strong>Laura G.</strong> – Penalista</p>
           </article>
           <article class="card">
             <p class="quote">"El proceso fue claro y rápido. La web convirtió en la primera semana."</p>
-            <p class="mt-1"><strong>Carlos R.</strong> – Laboral</p>
+            <p><strong>Carlos R.</strong> – Laboral</p>
           </article>
           <article class="card">
             <p class="quote">"El paquete Premium valió cada peso. El chatbot filtra consultas y ahorra tiempo."</p>
-            <p class="mt-1"><strong>Daniela P.</strong> – Civil</p>
+            <p><strong>Daniela P.</strong> – Civil</p>
           </article>
         </div>
       </div>
@@ -376,23 +356,31 @@
 
     <section id="garantia">
       <div class="container guarantee">
-        <div class="container">
-          <div id="contacto">
-            <h3>Hablemos de tu web por WhatsApp</h3>
-            <p class="mt-1">Escríbenos y te enviamos una propuesta en menos de 24 horas.</p>
-            <p class="mt-1 whatsapp">
-              <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M19.11 17.48c-.26-.13-1.52-.75-1.75-.84-.23-.09-.4-.13-.57.13-.17.26-.65.84-.8 1.01-.15.17-.3.2-.56.07-.26-.13-1.08-.4-2.06-1.27-.76-.68-1.27-1.52-1.42-1.78-.15-.26-.02-.4.11-.53.11-.11.26-.3.38-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.07-.13-.57-1.37-.78-1.88-.21-.5-.42-.43-.57-.43-.15 0-.32-.02-.49-.02-.17 0-.45.06-.68.32-.23.26-.9.88-.9 2.14 0 1.26.93 2.48 1.06 2.65.13.17 1.83 2.8 4.43 3.92.62.27 1.11.43 1.49.55.63.2 1.2.17 1.65.10.5-.08 1.52-.62 1.74-1.22.21-.6.21-1.12.15-1.22-.06-.1-.23-.16-.49-.29zM16.05 5C9.94 5 5 9.94 5 16.05c0 1.95.51 3.79 1.4 5.38L5 27l5.71-1.49A11 11 0 0 0 16.05 27C22.16 27 27.1 22.06 27.1 15.95 27.1 9.84 22.16 5 16.05 5zm0 20.1a9.97 9.97 0 0 1-5.08-1.41l-.36-.21-3.38.88.9-3.29-.23-.34A10 10 0 1 1 26.1 16.05 10.05 10.05 0 0 1 16.05 25.1z"/></svg>
-              <a class="cta-mini" href="https://wa.me/573001151592?text=Hola%20necesito%20una%20web%20para%20mi%20despacho">Chatear ahora</a>
-            </p>
-          </div>
-        </div>        
-        <div>
+        <div class="contact-card">
+          <h3>Hablemos de tu web por WhatsApp</h3>
+          <p>Escríbenos y te enviamos una propuesta en menos de 24 horas.</p>
+          <p class="whatsapp">
+            <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M19.11 17.48c-.26-.13-1.52-.75-1.75-.84-.23-.09-.4-.13-.57.13-.17.26-.65.84-.8 1.01-.15.17-.3.2-.56.07-.26-.13-1.08-.4-2.06-1.27-.76-.68-1.27-1.52-1.42-1.78-.15-.26-.02-.4.11-.53.11-.11.26-.3.38-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.07-.13-.57-1.37-.78-1.88-.21-.5-.42-.43-.57-.43-.15 0-.32-.02-.49-.02-.17 0-.45.06-.68.32-.23.26-.9.88-.9 2.14 0 1.26.93 2.48 1.06 2.65.13.17 1.83 2.8 4.43 3.92.62.27 1.11.43 1.49.55.63.2 1.2.17 1.65.10.5-.08 1.52-.62 1.74-1.22.21-.6.21-1.12.15-1.22-.06-.1-.23-.16-.49-.29zM16.05 5C9.94 5 5 9.94 5 16.05c0 1.95.51 3.79 1.4 5.38L5 27l5.71-1.49A11 11 0 0 0 16.05 27C22.16 27 27.1 22.06 27.1 15.95 27.1 9.84 22.16 5 16.05 5zm0 20.1a9.97 9.97 0 0 1-5.08-1.41l-.36-.21-3.38.88.9-3.29-.23-.34A10 10 0 1 1 26.1 16.05 10.05 10.05 0 0 1 16.05 25.1z"/></svg>
+            <a class="cta-mini" href="https://wa.me/573001151592?text=Hola%20necesito%20una%20web%20para%20mi%20despacho">Chatear ahora</a>
+          </p>
+        </div>
+        
+        <div class="faq-card">
           <div class="card">
             <h3>¿Dudas rápidas?</h3>
             <div class="faq">
-              <details><summary>¿Puedo pagar en partes?</summary><p>Sí. 60% al inicio, 40% al entregar.</p></details>
-              <details><summary>¿Puedo migrar mi web actual?</summary><p>Claro. Incluimos migración de contenido sin costo en Plus y Authority.</p></details>
-              <details><summary>¿Trabajan con firmas y abogados independientes?</summary><p>Sí, adaptamos el plan a tu contexto.</p></details>
+              <details>
+                <summary>¿Puedo pagar en partes?</summary>
+                <p>Sí. 60% al inicio, 40% al entregar.</p>
+              </details>
+              <details>
+                <summary>¿Puedo migrar mi web actual?</summary>
+                <p>Claro. Incluimos migración de contenido sin costo en Plus y Authority.</p>
+              </details>
+              <details>
+                <summary>¿Trabajan con firmas y abogados independientes?</summary>
+                <p>Sí, adaptamos el plan a tu contexto.</p>
+              </details>
             </div>
           </div>
         </div>
